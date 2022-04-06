@@ -1,0 +1,28 @@
+<!-- Password Reset Page -->
+
+<div class="divClassName">
+  <div class="row">
+    <div class="col main-right text-center d-flex align-items-center">
+      <div>
+        <div class="form-login box">
+          <h2 class="core-sprite brand-name-img"></h2>
+          <h5 class="light-color"><strong>Forgot your password?</strong></h5>
+          <hr>
+          <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+            <div class="form-group">
+              <%= f.label :"Enter your Email ID"  %><br />
+              <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "form-control" %>
+            </div>
+            <div class="actions">
+              <%= f.submit "Send me Reset Instructions", class: "btn btn-primary" %>
+            </div>
+          <% end %>
+        </div>
+        <div class="redirect-links box">
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

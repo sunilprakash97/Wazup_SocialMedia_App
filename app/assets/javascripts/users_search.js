@@ -3,10 +3,13 @@ $(document).ready(function(){
       var jqxhr = $.get(
         $("#users-search").attr("action"),
         {term: $("#users-search #term").val()},
-        function(){
+        function()
+        {
           var result = $("#users-result").html();
-          if(!result){
-            $("#users-search #term").popover({
+          if(!result)
+          {
+            $("#users-search #term").popover(
+              {
               content: "No result found.",
               placement: "bottom",
               html: true,

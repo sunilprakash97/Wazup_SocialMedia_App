@@ -42,6 +42,6 @@ group :production do
   gem 'rails_12factor'
 end
 
-ruby '2.6.1'
+# ruby '2.6.1'
 
 # gem 'mini_racer'

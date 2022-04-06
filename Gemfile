@@ -41,4 +41,4 @@ group :production do
   gem 'pg'
 end
 
-gem 'mini_racer'
+# gem 'mini_racer'

@@ -22,4 +22,10 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  # database: db/production.sqlite3
+  production:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: postgresql-cubic-76277
+  pool: 5

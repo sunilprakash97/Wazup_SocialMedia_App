@@ -323,10 +323,11 @@ footer .nav-item {
 }
 
 .upload-photos-icon {
-  height: 120px;
-  width: 120px;
-  border: 2px dashed #dddfe2;
-  border-radius: 2px;
+  text-align: center;
+  border-radius: 1rem;
+  width: 18%;
+  border: 2px dashed #4d4d4d;
+  // border-radius: 2px;
   padding: 48px;
   display: inline-block;
   margin: 2px;
@@ -348,12 +349,25 @@ footer .nav-item {
 .card-img-top{
   padding: 2%;
   background-color: #80808014;
+  border-radius: 76px;
 }
+.card-header:first-child{
+  font-size: 24px;
+  font-weight: 600;
+  background: #ffc5af;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 
+} 
 // Customize post views
 .post {
   .card-header {
-    background-color: white;
+    font-size: 24px;
+    background: #ffc5af;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    font-weight: 300;
+    // background-color: white;
   }
 
   .card-body {
@@ -472,7 +486,7 @@ footer .nav-item {
     height: calc(100% - 30px);
     top: 0;
     opacity: 0;
-    border-radius: 10px;
+    border-radius: 60px;
   }
 
   .col-4:hover .post-stat {
@@ -482,7 +496,8 @@ footer .nav-item {
 
   .image-preview {
     margin-bottom: 30px;
-    border-radius: 10px;}
+    border-radius: 10px;
+    border-radius: 60px;}
 }
 
 .search-result-item {

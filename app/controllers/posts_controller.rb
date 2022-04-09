@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :destroy]
 
   def index
-    @posts = Post.paginate(:page => params[:page], :per_page => 1).includes(:photos, :user, :likes).
+    @posts = Post.paginate(:page => params[:page], :per_page => 2).includes(:photos, :user, :likes).
       order("created_at desc")
     @post = Post.new
   end
@@ -19,9 +19,9 @@ class PostsController < ApplicationController
         end
       end
       redirect_to posts_path
-      flash[:notice] = "Saved..."
+      flash[:notice] = "Saved into your Wall "
     else
-      flash[:alert] = "Something went wrong..."
+      flash[:alert] = "Something went wrong !!!"
       redirect_to posts_path
     end
   end
@@ -36,12 +36,12 @@ class PostsController < ApplicationController
   def destroy
     if @post.user == current_user
       if @post.destroy
-        flash[:notice] = "Post deleted!!!"
+        flash[:notice] = "Post deleted !!!"
       else
-        flash[:alert] = "Something went wrong ..."
+        flash[:alert] = "Something went wrong !!!"
       end
     else
-      flash[:notice] = "You don't have permission to do that!"
+      flash[:notice] = "You don't have permission to do that!!"
     end
     redirect_to root_path
   end
@@ -51,7 +51,7 @@ class PostsController < ApplicationController
   def find_post
     @post = Post.find_by id: params[:id]
     return if @post
-      flash[:danger] = "Post not exist!!!"
+      flash[:danger] = "Post Does Not Exist !!!"
       redirect_to root_path
   end
 

@@ -44,4 +44,4 @@ group :production do
 end
 
 # gem 'mini_racer'
-# gem 'ransack', '~> 2.1'
+gem 'ransack', '~> 2.1'

@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   before_action :authenticate_user! 
-  def index
-    @users = User.search(params[:term])
-    respond_to :js
-  end
+  # def index
+  #   @users = User.search(params[:term])
+  #   respond_to :js
+  # end
   
   def show
     @user = User.find(params[:id])

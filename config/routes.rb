@@ -15,4 +15,8 @@ Rails.application.routes.draw do
     resources :bookmarks, only: [:create, :destroy], shallow: true
   end
 
+  namespace :api, default: { format: 'json' } do
+    get 'posts/search', to: 'posts#search'
+    resources :posts
+  end
 end 

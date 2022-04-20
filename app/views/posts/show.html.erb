@@ -4,9 +4,15 @@
   <div class="row post box col-xl-10 col-lg-11 col-xs-12">
     <div class="col-lg-8 col-md-7 px-0 d-flex post-show-img">
       <div class="align-self-center">
+    
+      <% if @post.photos.first.nil? %>
+        <div class="card-img-top image-preview textpost hide-text">qwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiop</div>
+      <% else %>
         <%= render "photos", {post: @post} %>
+     <% end %>   
       </div>
     </div>
+
     <div class="col-lg-4 col-md-5 mt-sm-4 mt-md-0">
       <div class="row px-3 d-flex align-items-center">
         <%= link_to user_path(@post.user), class: "no-text-decoration" do %>

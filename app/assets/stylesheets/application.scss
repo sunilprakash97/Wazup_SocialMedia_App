@@ -443,13 +443,22 @@ footer .nav-item {
 }
 
 .delete-comment {
-
   width: 11px;
   height: 11px;
   background-image: image-url("delete_cmt.png");
   float: right;
   margin: 5px 17px 0 10px;
 }
+
+
+.textpost {
+  background-image: image-url("text_post.jpeg");  
+  height: 18rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 
 .profile-tab {
   margin-top: 60px;
@@ -570,4 +579,17 @@ footer .nav-item {
       width: auto !important;
       padding-right: 100px;
     }
+}
+
+
+.dropzone .dz-preview .dz-remove {
+  background-image: image-url("delete_cmt.png");
+  float: right;
+  margin: 5px 17px 0 10px;
+  width: 23px;
+  height: 23px;
+  position: relative;
+  top: -118px;
+  right: -6px;
+  z-index: 99999;
 }

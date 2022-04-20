@@ -19,4 +19,16 @@ Rails.application.routes.draw do
     get 'posts/search', to: 'posts#search'
     resources :posts
   end
+
+  namespace :api do
+    namespace :v1 do
+
+      post 'login', to: 'sessions#login', as: "login"
+      post 'refresh_token', to: 'sessions#refresh_token', as: "refresh_token"
+      delete 'logout', to: 'sessions#logout', as: "logout"
+
+      resources :posts
+    end
+  end
+
 end 

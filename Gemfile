@@ -43,5 +43,8 @@ group :production do
   gem 'rails_12factor'
 end
 
-# gem 'mini_racer'
+
 gem 'ransack', '~> 2.1'
+
+# For Json web token generation
+gem 'jwt'
